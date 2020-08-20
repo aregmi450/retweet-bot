@@ -4,8 +4,8 @@ from time import sleep
 # Make sure your keys.py file lives in the same directory as this .py file.
 
 
-auth = tweepy.OAuthHandler('SZg2GdKeb0G0BVj5dSujfzM94', '4xXr6eZRDqqBgGrNHfu7V4uyRztPZoD1rBM44zBuiyTvQ13kge')
-auth.set_access_token('1278599604947173377-OxL2W1NTvGR7LQtT5zk0kmDR0L3lFx', '8jm4C7aoHsuJaQ4mpjlsEMPzGBZr3ilD4WJdYpEP9TTGB')
+auth = tweepy.OAuthHandler('Insert your  auth codes here both token and secret')
+auth.set_access_token('insert access token code', 'insert access token secret')
 api = tweepy.API(auth)
 for tweet in tweepy.Cursor(api.search, q='#MidnightGospel').items(999):
     try:

@@ -7,14 +7,14 @@ from time import sleep
 auth = tweepy.OAuthHandler('Insert your  auth codes here both token and secret')
 auth.set_access_token('insert access token code', 'insert access token secret')
 api = tweepy.API(auth)
-for tweet in tweepy.Cursor(api.search, q='#MidnightGospel').items(999):
+for tweet in tweepy.Cursor(api.search, q='#keyword content you want to retweet').items(999):
     try:
-        print('\nClancy found tweet by @' +
+        print('\n Username found tweet by @' +
               tweet.user.screen_name + '. ' + 'Attempting to retweet.')
 
         tweet.retweet()
         print('Retweet published successfully.')
-
+        # no of times the bot should search for hashtags of the keyword is written inside items
         # Where sleep(10), sleep is measured in seconds.
         # Change 10 to amount of seconds you want to have in-between retweets.
         # Read Twitter's rules on automation. Don't spam!
